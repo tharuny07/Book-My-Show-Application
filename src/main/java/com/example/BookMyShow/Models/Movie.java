@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Builder
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,27 +1,22 @@
 package com.example.BookMyShow.Controllers;
 
-import com.example.BookMyShow.EntryDtos.UserEntryDto;
-import com.example.BookMyShow.Services.UserService;
+import com.example.BookMyShow.EntryDtos.TheatreEntryDto;
+import com.example.BookMyShow.Services.TheatreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/users")
-public class UserController {
-
+@RequestMapping("/theatres")
+public class TheatreController {
     @Autowired
-    UserService userService;
+    TheatreService theatreService;
 
-    @PostMapping("/addUser")
-    public ResponseEntity<String> addUser(UserEntryDto userEntryDto)
-    {
-        String response= userService.addUser(userEntryDto);
+    public ResponseEntity<String> addTheatre(TheatreEntryDto theatreEntryDto){
+        String response=theatreService.addTheatre(theatreEntryDto);
 
         return new ResponseEntity<>(response, HttpStatus.CREATED);
-
     }
 }

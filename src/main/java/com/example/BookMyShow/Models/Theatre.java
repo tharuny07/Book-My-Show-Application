@@ -10,6 +10,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Theatre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

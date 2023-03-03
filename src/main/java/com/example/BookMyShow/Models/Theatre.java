@@ -1,8 +1,10 @@
 package com.example.BookMyShow.Models;
 
-import jakarta.persistence.*;
+import com.example.BookMyShow.Enums.SeatType;
+import javax.persistence.*;
 import lombok.*;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -23,4 +25,5 @@ public class Theatre {
 
     @OneToMany(mappedBy = "theatre",cascade = CascadeType.ALL)
     private List<TheatreSeat> theatreSeatList;
+
 }

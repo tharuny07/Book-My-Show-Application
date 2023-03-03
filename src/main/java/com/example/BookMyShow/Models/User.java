@@ -1,6 +1,6 @@
 package com.example.BookMyShow.Models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 import java.util.List;
@@ -18,7 +18,6 @@ public class User {
     @Column(unique = true,nullable = false)
     private String email;
     private String name;
-    @NonNull
     @Column(unique = true)
     private String mobileNo;
     private int age;

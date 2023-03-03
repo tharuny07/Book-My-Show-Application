@@ -2,9 +2,10 @@ package com.example.BookMyShow.Models;
 
 import com.example.BookMyShow.Enums.Genre;
 import com.example.BookMyShow.Enums.Language;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
+//import javax.persistence.*;
 import java.util.List;
 
 @Entity

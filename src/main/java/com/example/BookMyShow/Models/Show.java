@@ -1,8 +1,7 @@
 package com.example.BookMyShow.Models;
 
-import com.example.BookMyShow.Enums.ShowSeat;
 import com.example.BookMyShow.Enums.ShowType;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -14,6 +13,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Show {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

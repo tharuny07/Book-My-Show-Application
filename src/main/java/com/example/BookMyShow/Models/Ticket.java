@@ -1,6 +1,6 @@
 package com.example.BookMyShow.Models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -11,6 +11,7 @@ import java.time.LocalTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +21,7 @@ public class Ticket {
     private LocalTime showTiming;
     private LocalDate showDate;
     private String theatreName;
+    private String bookedSeats;
 
     @ManyToOne
     @JoinColumn

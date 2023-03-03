@@ -1,7 +1,8 @@
 package com.example.BookMyShow.Controllers;
 
-import com.example.BookMyShow.EntryDtos.TheatreEntryDto;
-import com.example.BookMyShow.Services.TheatreService;
+import com.example.BookMyShow.EntryDtos.ShowEntryDto;
+import com.example.BookMyShow.Services.ShowService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,14 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/theatres")
-public class TheatreController {
+@RequestMapping("/shows")
+public class ShowController {
     @Autowired
-    TheatreService theatreService;
-     @PostMapping("/addTheatre")
-    public ResponseEntity<String> addTheatre(@RequestBody TheatreEntryDto theatreEntryDto){
-        String response=theatreService.addTheatre(theatreEntryDto);
+    ShowService showService;
 
+    @PostMapping("/addShow")
+    public ResponseEntity<String> addShow(@RequestBody ShowEntryDto showEntryDto){
+        String response= showService.addShow(showEntryDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
+
 }

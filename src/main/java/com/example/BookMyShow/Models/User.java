@@ -1,6 +1,8 @@
 package com.example.BookMyShow.Models;
 
 import javax.persistence.*;
+
+import com.example.BookMyShow.ResponceDtos.TicketResponseDto;
 import lombok.*;
 
 import java.util.List;
@@ -15,9 +17,9 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private String name;
     @Column(unique = true,nullable = false)
     private String email;
-    private String name;
     @Column(unique = true)
     private String mobileNo;
     private int age;

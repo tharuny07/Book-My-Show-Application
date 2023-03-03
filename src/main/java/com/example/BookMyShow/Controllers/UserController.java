@@ -1,14 +1,12 @@
 package com.example.BookMyShow.Controllers;
 
 import com.example.BookMyShow.EntryDtos.UserEntryDto;
+import com.example.BookMyShow.ResponceDtos.UserResponseDto;
 import com.example.BookMyShow.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
@@ -24,5 +22,10 @@ public class UserController {
 
         return new ResponseEntity<>(response, HttpStatus.CREATED);
 
+    }
+   @GetMapping("getUser")
+    public ResponseEntity<UserResponseDto> getUserByEmail(@RequestParam String email){
+       UserResponseDto userResponseDto=userService.getUserByEmailId(email);
+       return new ResponseEntity<>(userResponseDto,HttpStatus.FOUND);
     }
 }

@@ -7,8 +7,11 @@ The application also provides an admin dashboard for managing movies, theatrs an
 CineMate offers the following features:
 
 Search for movies by title, genre, or language
+
 View upcoming movie showtimes for theaters near you
+
 Book tickets for your preferred movie showings
+
 Manage movies, theaters, and showtimes using the admin dashboard
 
 # Contributing
